@@ -454,10 +454,10 @@
       max-width: 900px; margin: 0 auto; padding: 0 32px;
       text-align: center;
     }
-    .quote-breaker__mark {
-      font-family: 'Josefin Sans', sans-serif;
-      font-size: 120px; color: var(--gold); line-height: 0.6;
-      margin-bottom: 16px; opacity: 0.6; font-weight: 300;
+    .quote-breaker__inner::before {
+      content: ''; display: block;
+      width: 48px; height: 2px; background: var(--gold);
+      margin: 0 auto 32px;
     }
     .quote-breaker__text {
       font-family: 'Josefin Sans', sans-serif;
@@ -471,7 +471,6 @@
     }
     @media (max-width: 600px) {
       .quote-breaker { padding: 72px 0; }
-      .quote-breaker__mark { font-size: 80px; }
     }
 
     /* ===== COACH ===== */
