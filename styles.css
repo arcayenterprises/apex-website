@@ -218,10 +218,10 @@
     .club-grid::after {
       content: 'VS'; position: absolute; left: 50%; top: 50%;
       transform: translate(-50%, -50%);
-      width: 64px; height: 64px; border-radius: 50%;
+      width: 52px; height: 52px; border-radius: 50%;
       background: #fff; border: 2px solid var(--gold);
       display: flex; align-items: center; justify-content: center;
-      font-family: 'Josefin Sans', sans-serif; font-size: 18px; font-weight: 600;
+      font-family: 'Josefin Sans', sans-serif; font-size: 15px; font-weight: 600;
       letter-spacing: 2px; color: var(--gold); z-index: 2;
       box-shadow: 0 4px 16px rgba(0,0,0,0.06);
     }
@@ -261,14 +261,14 @@
         grid-template-columns: none; display: flex;
         overflow-x: auto; scroll-snap-type: x mandatory;
         -webkit-overflow-scrolling: touch; gap: 16px;
-        padding-bottom: 16px; margin: 0 -32px; padding-left: 32px; padding-right: 32px;
+        padding-bottom: 16px; margin: 0 -20px; padding-left: 20px; padding-right: 20px;
       }
       .pathway__grid::-webkit-scrollbar { display: none; }
       .pathway__grid > * {
         scroll-snap-align: start; min-width: 300px; flex-shrink: 0;
       }
       .pathway__grid::after {
-        content: ''; min-width: 16px; flex-shrink: 0;
+        content: ''; min-width: 4px; flex-shrink: 0;
       }
     }
     .pathway__scroll-hint {
@@ -986,6 +986,7 @@
       .hero__brand-apex { letter-spacing: 6px; }
       .hero__brand-sub { letter-spacing: 4px; }
       .assessment__form { padding: 28px 20px; }
+      .assessment__inner { padding: 0 20px; }
       .interest-form { grid-template-columns: 1fr; }
       .interest-box { padding: 28px 20px; }
       .school__formats { grid-template-columns: repeat(2, 1fr); }
