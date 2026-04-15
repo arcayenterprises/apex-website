@@ -472,7 +472,9 @@
       color: var(--gold); font-weight: 500;
     }
     @media (max-width: 600px) {
-      .quote-breaker { padding: 72px 0; }
+      .quote-breaker { padding: 56px 0; }
+      .quote-breaker__text { font-size: 22px; margin-bottom: 20px; }
+      .quote-breaker__inner::before { margin-bottom: 24px; }
     }
 
     /* ===== COACH ===== */
