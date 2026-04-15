@@ -210,7 +210,7 @@
             <div class="tier-feature"><span class="tier-feature__dot">◆</span> Priority for travel squads & showcases</div>
           </div>
           <span class="tier-card__ratio" style="border:none;padding:0;margin-bottom:24px">Invitation only. Contact us to learn more.</span>
-          <a href="#assessment" class="btn-outline">Inquire About Summit</a>
+          <a href="#assessment" class="btn-gold">Book an Assessment</a>
         </div>
       </div>
     </div>
@@ -220,84 +220,6 @@
     <div class="pathway-note fade-in">
       <p class="pathway-note__title">Placements are honest. Movement is fluid.</p>
       <p class="pathway-note__text">Not every player starts at the top — and that's okay. Players are placed based on readiness, not politics. Evaluations happen throughout the season, and movement between tiers is always possible when a player demonstrates growth, consistency, and commitment.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ===== PROGRAM FINDER ===== -->
-<section class="section finder" id="program-finder" aria-labelledby="finder-title">
-  <div class="finder__inner container">
-    <div class="fade-in">
-      <div class="section-label">Find Your Fit</div>
-      <h2 class="section-title" id="finder-title">Not sure which program is right?</h2>
-      <p class="section-sub">Answer two quick questions and we'll point you in the right direction.</p>
-    </div>
-
-    <div class="finder__steps" id="finderSteps">
-      <!-- Step 1: Age -->
-      <div class="finder__step active" id="finderStep1">
-        <div class="finder__progress">
-          <div class="finder__dot active"></div>
-          <div class="finder__dot"></div>
-        </div>
-        <p class="finder__question">How old is your child?</p>
-        <div class="finder__options">
-          <div class="finder__option" onclick="selectAge('5-6')">5–6</div>
-          <div class="finder__option" onclick="selectAge('7-8')">7–8</div>
-          <div class="finder__option" onclick="selectAge('9-10')">9–10</div>
-          <div class="finder__option" onclick="selectAge('11-12')">11–12</div>
-          <div class="finder__option" onclick="selectAge('13-15')">13–15</div>
-          <div class="finder__option" onclick="selectAge('16+')">16+</div>
-        </div>
-      </div>
-
-      <!-- Step 2: Level -->
-      <div class="finder__step" id="finderStep2">
-        <div class="finder__progress">
-          <div class="finder__dot active"></div>
-          <div class="finder__dot active"></div>
-        </div>
-        <p class="finder__question">What best describes their current level?</p>
-        <div class="finder__options">
-          <div class="finder__option" onclick="selectLevel('new')">New to soccer</div>
-          <div class="finder__option" onclick="selectLevel('rec')">Plays recreationally</div>
-          <div class="finder__option" onclick="selectLevel('club')">Plays for a club</div>
-          <div class="finder__option" onclick="selectLevel('comp')">Competes at a high level</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Results -->
-    <div class="finder__result" id="resultFoundation">
-      <div class="finder__result-tier">Recommended Program</div>
-      <div class="finder__result-name">Foundation</div>
-      <p class="finder__result-desc">Your child is at the perfect age to build strong technical habits and fall in love with the game. Foundation is open enrollment — no assessment needed. Max 16 players with 2 dedicated coaches.</p>
-      <a href="#assessment" class="btn-gold btn-gold--large">Register Now</a>
-      <br><button class="finder__restart" onclick="resetFinder()">← Start over</button>
-    </div>
-
-    <div class="finder__result" id="resultElevate">
-      <div class="finder__result-tier">Recommended Program</div>
-      <div class="finder__result-name">Elevate</div>
-      <p class="finder__result-desc">Your child sounds ready for focused development. Elevate builds technical skill and football IQ through structured, high-intensity training. Entry is by assessment — book one and we'll find the right fit.</p>
-      <a href="#assessment" class="btn-gold btn-gold--large">Book an Assessment</a>
-      <br><button class="finder__restart" onclick="resetFinder()">← Start over</button>
-    </div>
-
-    <div class="finder__result" id="resultSummitTrack">
-      <div class="finder__result-tier">Recommended Program</div>
-      <div class="finder__result-name">Elevate → Summit</div>
-      <p class="finder__result-desc">Your child is competing at a high level and may be ready for our Summit pathway. All players start with an assessment. If they demonstrate elite readiness, Summit placement is possible. If not yet, Elevate is the bridge.</p>
-      <a href="#assessment" class="btn-gold btn-gold--large">Book an Assessment</a>
-      <br><button class="finder__restart" onclick="resetFinder()">← Start over</button>
-    </div>
-
-    <div class="finder__result" id="resultContact">
-      <div class="finder__result-tier">Let's Talk</div>
-      <div class="finder__result-name">We'd love to learn more</div>
-      <p class="finder__result-desc">Every player's journey is different. The best next step is a conversation — tell us about your child and we'll recommend the right program and schedule.</p>
-      <a href="#assessment" class="btn-gold btn-gold--large">Get in Touch</a>
-      <br><button class="finder__restart" onclick="resetFinder()">← Start over</button>
     </div>
   </div>
 </section>
@@ -430,53 +352,6 @@
     }
   }
 
-
-  // Program Finder
-  let finderAge = null;
-  
-  function selectAge(age) {
-    finderAge = age;
-    // If age is 5-8, go straight to Foundation (no level needed)
-    if (age === '5-6' || age === '7-8') {
-      showResult('resultFoundation');
-    } else {
-      document.getElementById('finderStep1').classList.remove('active');
-      document.getElementById('finderStep2').classList.add('active');
-    }
-  }
-  
-  function selectLevel(level) {
-    document.getElementById('finderStep2').classList.remove('active');
-    
-    if (level === 'new' || level === 'rec') {
-      // New or recreational players 9+ need assessment for Elevate
-      showResult('resultElevate');
-    } else if (level === 'club') {
-      // Club players could be Elevate
-      showResult('resultElevate');
-    } else if (level === 'comp') {
-      // Competitive players could be Summit track
-      showResult('resultSummitTrack');
-    } else {
-      showResult('resultContact');
-    }
-  }
-  
-  function showResult(id) {
-    document.querySelectorAll('.finder__result').forEach(r => r.classList.remove('active'));
-    document.getElementById(id).classList.add('active');
-    // Hide the steps
-    document.querySelectorAll('.finder__step').forEach(s => s.classList.remove('active'));
-  }
-  
-  function resetFinder() {
-    finderAge = null;
-    document.querySelectorAll('.finder__result').forEach(r => r.classList.remove('active'));
-    document.querySelectorAll('.finder__step').forEach(s => s.classList.remove('active'));
-    document.getElementById('finderStep1').classList.add('active');
-    // Scroll back to finder
-    document.getElementById('program-finder').scrollIntoView({ behavior: 'smooth' });
-  }
 
 
 
