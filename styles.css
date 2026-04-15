@@ -415,22 +415,30 @@
     }
 
     /* ===== FACILITY TEASER (Homepage) ===== */
-    .facility-teaser { background: var(--light); }
+    .facility-teaser { background: var(--black); position: relative; overflow: hidden; }
+    .facility-teaser::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 70% 30%, rgba(195,158,109,0.06) 0%, transparent 50%);
+      pointer-events: none;
+    }
     .facility-teaser__grid {
       display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;
+      position: relative; z-index: 2;
     }
     .facility-teaser__image img {
       width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 4px;
     }
+    .facility-teaser .section-label { color: var(--gold); }
+    .facility-teaser .section-title { color: #fff; }
     .facility-teaser__text {
-      font-size: 17px; line-height: 1.7; color: #555; margin-bottom: 28px;
+      font-size: 17px; line-height: 1.7; color: rgba(255,255,255,0.65); margin-bottom: 28px;
     }
     .facility-teaser__features {
       margin-bottom: 32px;
     }
     .facility-teaser__feature {
-      font-size: 14px; color: #444; padding: 8px 0;
-      border-bottom: 1px solid rgba(0,0,0,0.05);
+      font-size: 14px; color: rgba(255,255,255,0.8); padding: 10px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
     }
     .facility-teaser__feature:last-child { border-bottom: none; }
     @media (max-width: 900px) {
