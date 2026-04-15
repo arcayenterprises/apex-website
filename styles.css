@@ -414,6 +414,31 @@
       width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 4px;
     }
 
+    /* ===== FACILITY TEASER (Homepage) ===== */
+    .facility-teaser { background: var(--light); }
+    .facility-teaser__grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;
+    }
+    .facility-teaser__image img {
+      width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 4px;
+    }
+    .facility-teaser__text {
+      font-size: 17px; line-height: 1.7; color: #555; margin-bottom: 28px;
+    }
+    .facility-teaser__features {
+      margin-bottom: 32px;
+    }
+    .facility-teaser__feature {
+      font-size: 14px; color: #444; padding: 8px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+    .facility-teaser__feature:last-child { border-bottom: none; }
+    @media (max-width: 900px) {
+      .facility-teaser__grid {
+        grid-template-columns: 1fr; gap: 32px;
+      }
+    }
+
     /* ===== COACH ===== */
     .coach { background: var(--light); }
     .coach__grid { display: grid; grid-template-columns: 5fr 4fr; gap: 64px; align-items: start; }
