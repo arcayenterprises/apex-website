@@ -207,9 +207,9 @@
     }
 
     /* ===== ACADEMY + CLUB ===== */
-    .club-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-bottom: 48px; position: relative; }
-    .club-col { padding: 36px 32px; }
-    .club-col--left { border-right: 1px solid #eee; }
+    .club-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; margin-bottom: 48px; position: relative; }
+    .club-col { padding: 36px 0; }
+    .club-col--left { border-right: none; }
     .club-col__label {
       font-size: 12px; letter-spacing: 3px; text-transform: uppercase;
       margin-bottom: 20px;
@@ -223,7 +223,7 @@
       display: flex; align-items: center; justify-content: center;
       font-family: 'Josefin Sans', sans-serif; font-size: 15px; font-weight: 600;
       letter-spacing: 2px; color: var(--gold); z-index: 2;
-      box-shadow: 0 0 0 8px #fff, 0 4px 16px rgba(0,0,0,0.06);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.06);
     }
     @media (max-width: 900px) {
       .club-grid {
