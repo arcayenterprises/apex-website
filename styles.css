@@ -1012,28 +1012,6 @@
     }
 
 
-    /* ===== QUOTE BREAKER ===== */
-    .quote-breaker {
-      background: var(--black); padding: 80px 32px;
-      text-align: center; position: relative; overflow: hidden;
-    }
-    .quote-breaker__bg {
-      position: absolute; inset: 0;
-      background: radial-gradient(ellipse at 50% 50%, rgba(195,158,109,0.08) 0%, transparent 60%);
-    }
-    .quote-breaker__text {
-      position: relative; z-index: 2;
-      font-family: 'Josefin Sans', sans-serif;
-      font-size: clamp(22px, 3.5vw, 34px); font-weight: 400;
-      color: #fff; line-height: 1.5; max-width: 800px; margin: 0 auto;
-      font-style: italic;
-    }
-    .quote-breaker__text span { color: var(--gold); font-style: normal; }
-    .quote-breaker__author {
-      font-size: 14px; color: var(--gold); margin-top: 20px;
-      letter-spacing: 2px; text-transform: uppercase; position: relative; z-index: 2;
-    }
-
     /* ===== SCROLL TO TOP ===== */
     .scroll-top {
       position: fixed; bottom: 32px; right: 32px; z-index: 900;
