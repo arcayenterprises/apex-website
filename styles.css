@@ -508,8 +508,20 @@
 
     /* ===== TESTIMONIALS ===== */
     .testimonials { background: #fff; }
+    .testimonials__header {
+      text-align: center; margin-bottom: 48px;
+    }
+    .testimonials__header .review-badge {
+      margin: 0 auto 32px;
+    }
+    .testimonials__header .section-label {
+      margin-bottom: 12px;
+    }
+    .testimonials__list {
+      display: flex; flex-direction: column; gap: 24px;
+    }
     .testimonial {
-      background: var(--light); padding: 40px 36px; margin-bottom: 32px;
+      background: var(--light); padding: 40px 36px;
       border-left: 3px solid var(--gold);
     }
     .testimonial__text { font-size: 17px; line-height: 1.8; color: #444; font-style: italic; margin-bottom: 20px; }
