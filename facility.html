@@ -152,13 +152,6 @@
 
 <!-- Scroll to top button -->
 <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Scroll to top">↑</button>
-
-<!-- Mobile sticky CTA -->
-<div class="mobile-cta" id="mobileCta">
-  <a href="/index.html#assessment" class="btn-gold">Book a Trial Assessment</a>
-</div>
-
-
 <!-- ===== FOOTER ===== -->
 <footer class="footer" role="contentinfo">
   <div class="container">
@@ -309,13 +302,11 @@
 
   // Scroll to top button visibility
   const scrollTopBtn = document.getElementById('scrollTop');
-  const mobileCta = document.getElementById('mobileCta');
   const heroHeight = document.querySelector('.hero').offsetHeight;
   
   window.addEventListener('scroll', () => {
     const scrolled = window.scrollY > heroHeight;
     scrollTopBtn.classList.toggle('visible', scrolled);
-    if (mobileCta) mobileCta.classList.toggle('visible', scrolled);
   });
 
   // Track form submission for analytics

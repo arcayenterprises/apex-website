@@ -437,6 +437,8 @@
       .facility-teaser__grid {
         grid-template-columns: 1fr; gap: 32px;
       }
+      .facility-teaser__image { order: 2; }
+      .facility-teaser__content { order: 1; }
     }
 
     /* ===== QUOTE BREAKER ===== */
