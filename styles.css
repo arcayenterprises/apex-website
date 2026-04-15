@@ -886,6 +886,11 @@
       font-family: 'Josefin Sans', sans-serif;
       font-size: clamp(36px, 5vw, 52px); font-weight: 500;
       color: var(--black); line-height: 1;
+      white-space: nowrap;
+    }
+    .impact-stat__value--text {
+      font-size: clamp(26px, 3.5vw, 38px);
+      letter-spacing: 1px;
     }
     .impact-stat__label {
       font-family: 'Josefin Sans', sans-serif;
@@ -895,6 +900,7 @@
     @media (max-width: 600px) {
       .impact-bar__inner { gap: 32px; }
       .impact-stat__value { font-size: 32px; }
+      .impact-stat__value--text { font-size: 22px; }
     }
 
 
