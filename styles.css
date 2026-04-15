@@ -207,24 +207,14 @@
     }
 
     /* ===== ACADEMY + CLUB ===== */
-    .club-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; margin-bottom: 48px; position: relative; }
-    .club-col { padding: 36px 0; }
-    .club-col--left { border-right: none; }
+    .club-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-bottom: 48px; position: relative; }
+    .club-col { padding: 36px 48px; }
+    .club-col--left { border-right: 1px solid #e5e5e5; }
     .club-col__label {
       font-size: 12px; letter-spacing: 3px; text-transform: uppercase;
       margin-bottom: 20px;
     }
     .club-col__text { font-size: 16px; line-height: 1.8; color: #555; }
-    .club-grid::after {
-      content: 'VS'; position: absolute; left: 50%; top: 50%;
-      transform: translate(-50%, -50%);
-      width: 56px; height: 56px; border-radius: 50%;
-      background: #fff; border: 2px solid var(--gold);
-      display: flex; align-items: center; justify-content: center;
-      font-family: 'Josefin Sans', sans-serif; font-size: 15px; font-weight: 600;
-      letter-spacing: 2px; color: var(--gold); z-index: 2;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.06);
-    }
     @media (max-width: 900px) {
       .club-grid {
         grid-template-columns: 1fr;
@@ -241,6 +231,16 @@
         border-left: 3px solid var(--gold);
       }
       .club-col__text { font-size: 15px; }
+      .club-grid::after {
+        content: 'VS'; position: absolute; left: 50%; top: 50%;
+        transform: translate(-50%, -50%);
+        width: 56px; height: 56px; border-radius: 50%;
+        background: #fff; border: 2px solid var(--gold);
+        display: flex; align-items: center; justify-content: center;
+        font-family: 'Josefin Sans', sans-serif; font-size: 15px; font-weight: 600;
+        letter-spacing: 2px; color: var(--gold); z-index: 2;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+      }
     }
     .club-callout {
       border-left: 3px solid var(--gold); padding-left: 28px; margin-bottom: 36px;
