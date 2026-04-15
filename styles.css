@@ -262,11 +262,16 @@
     }
     .pathway__mobile-list { display: none; }
     @media (max-width: 960px) {
-      .pathway__grid { display: none; }
-      .pathway__scroll-hint { display: none; }
-      .pathway__mobile-list {
+      /* Homepage: hide grid, show mobile compact list */
+      .pathway--has-mobile .pathway__grid { display: none; }
+      .pathway--has-mobile .pathway__mobile-list {
         display: flex; flex-direction: column; gap: 12px;
       }
+      /* Programs page (no mobile list): stack cards vertically */
+      .pathway:not(.pathway--has-mobile) .pathway__grid {
+        grid-template-columns: 1fr; gap: 32px;
+      }
+      .pathway__scroll-hint { display: none; }
     }
     .pathway__mobile-item {
       display: flex; align-items: center; justify-content: space-between;
