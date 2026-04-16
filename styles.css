@@ -447,6 +447,15 @@
       .about-intro__points { grid-template-columns: 1fr; gap: 16px; }
       .about-intro__lead { font-size: 16px; }
     }
+    /* About page: differentiate coach from proofs */
+    .about-intro + .coach + .proofs {
+      background: #fff;
+      border-top: 3px solid var(--gold);
+      padding-top: 56px;
+    }
+    .about-intro + .coach {
+      padding-bottom: 48px;
+    }
 
     /* ===== CONTACT PAGE ===== */
     .contact-page { background: #fff; }
