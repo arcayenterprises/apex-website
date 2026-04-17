@@ -115,7 +115,7 @@
     .hero__bg {
       position: absolute; inset: 0; z-index: 1;
       background-size: cover; background-position: center 30%;
-      background-image: url('https://images.unsplash.com/photo-1526232761682-d26e03ac148e?w=1920&q=80');
+      background-image: url('/images/hero.jpg');
     }
     .hero__overlay {
       position: absolute; inset: 0; z-index: 2;
