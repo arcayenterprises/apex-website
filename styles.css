@@ -543,8 +543,8 @@
 
     /* ===== FACILITY RENTAL ===== */
     .facility-rental__grid {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
-      max-width: 700px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px;
+      max-width: 960px; margin: 0 auto;
     }
     @media (max-width: 600px) {
       .facility-rental__grid { grid-template-columns: 1fr; }
