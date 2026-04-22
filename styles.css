@@ -666,6 +666,39 @@
     .testimonials__header .section-label {
       margin-bottom: 12px;
     }
+    .testimonials__videos {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 32px;
+      margin-bottom: 48px;
+    }
+    .video-testimonial {
+      display: flex; flex-direction: column;
+    }
+    .video-testimonial__frame {
+      position: relative; width: 100%;
+      aspect-ratio: 1 / 1;
+      background: #000; overflow: hidden;
+      border-radius: 4px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    }
+    .video-testimonial__frame iframe {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%; border: 0;
+    }
+    .video-testimonial__name {
+      font-size: 14px; font-weight: 500; color: var(--black);
+      margin-top: 16px; text-align: center;
+    }
+    .video-testimonial__role {
+      color: #888; font-weight: 400;
+    }
+    @media (max-width: 700px) {
+      .testimonials__videos {
+        grid-template-columns: 1fr; gap: 28px;
+        max-width: 440px; margin-left: auto; margin-right: auto;
+        margin-bottom: 40px;
+      }
+    }
+
     .testimonials__list {
       display: flex; flex-direction: column; gap: 24px;
     }
