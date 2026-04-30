@@ -1,7 +1,7 @@
 // Nav scroll effect
-  const nav = document.getElementById('nav');
+  const navEl = document.getElementById('nav');
   window.addEventListener('scroll', () => {
-    nav.classList.toggle('scrolled', window.scrollY > 60);
+    navEl.classList.toggle('scrolled', window.scrollY > 60);
   });
 
   // Fade-in on scroll
@@ -105,13 +105,13 @@
 
   // Scroll to top button visibility
   const scrollTopBtn = document.getElementById('scrollTop');
-  const mobileCta = document.getElementById('mobileCta');
+  const mobileCtaEl = document.getElementById('mobileCta');
   const heroHeight = document.querySelector('.hero').offsetHeight;
   
   window.addEventListener('scroll', () => {
     const scrolled = window.scrollY > heroHeight;
     scrollTopBtn.classList.toggle('visible', scrolled);
-    if (mobileCta) mobileCta.classList.toggle('visible', scrolled);
+    if (mobileCtaEl) mobileCtaEl.classList.toggle('visible', scrolled);
   });
 
   // Track form submission for analytics
