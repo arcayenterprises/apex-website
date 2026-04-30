@@ -670,9 +670,7 @@
       display: grid; grid-template-columns: 1fr 1fr; gap: 32px;
       margin-bottom: 48px;
     }
-    .video-testimonial {
-      display: flex; flex-direction: column;
-    }
+    .video-testimonial { display: flex; flex-direction: column; }
     .video-testimonial__frame {
       position: relative; width: 100%;
       aspect-ratio: 1 / 1;
@@ -688,9 +686,7 @@
       font-size: 14px; font-weight: 500; color: var(--black);
       margin-top: 16px; text-align: center;
     }
-    .video-testimonial__role {
-      color: #888; font-weight: 400;
-    }
+    .video-testimonial__role { color: #888; font-weight: 400; }
     @media (max-width: 700px) {
       .testimonials__videos {
         grid-template-columns: 1fr; gap: 28px;
@@ -851,6 +847,12 @@
     /* FTF logo is wide and visually thinner - give it more height to balance */
     .partners__logo[alt*="FTF"] {
       height: 130px;
+    }
+    /* Wide horizontal logotypes (like EightX) */
+    .partners__logo--wide {
+      height: auto;
+      max-height: 80px;
+      max-width: 240px;
     }
 
     /* ===== TOURNAMENTS ===== */
