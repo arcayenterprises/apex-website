@@ -12,18 +12,22 @@
   </script>
 
 
-  <!-- Meta (Facebook/Instagram) Pixel -->
+  <!-- Meta (Facebook/Instagram) Pixel - REPLACE PIXEL_ID with your actual Pixel ID -->
+  <!-- To set up: go to business.facebook.com > Events Manager > Connect Data Sources > Web > Meta Pixel -->
+  <!-- Get your Pixel ID (a 15-16 digit number) and replace PIXEL_ID below -->
+  <!--
   <script>
     !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
     n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
     n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
     t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
     document,'script','https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1695835938439079');
+    fbq('init', 'PIXEL_ID');
     fbq('track', 'PageView');
   </script>
   <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=1695835938439079&ev=PageView&noscript=1"/></noscript>
+    src="https://www.facebook.com/tr?id=PIXEL_ID&ev=PageView&noscript=1"/></noscript>
+  -->
 
   <!-- Google Search Console verification - REPLACE with your verification meta tag -->
   <!-- To set up: go to search.google.com/search-console, add property, choose HTML tag method -->
@@ -119,12 +123,12 @@
       </div>
 
       <div class="trip-card fade-in delay-2">
-        <img class="trip-card__img" src="/images/champions-cup.jpg" alt="Upcoming Apex Football Academy tournament opportunity" loading="lazy">
+        <img class="trip-card__img" src="/images/surfcup.jpg" alt="San Diego Surf Cup Presented by Nike — Apex Football Academy U12 and U13 teams compete July 2026" loading="lazy">
         <div class="trip-card__body">
-          <span class="trip-card__badge trip-card__badge--upcoming">Coming Soon</span>
-          <h3 class="trip-card__name">[Next Tournament/Trip]</h3>
-          <p class="trip-card__details">[Location] · [Date]</p>
-          <p class="trip-card__desc">Details coming soon. Academy members get priority placement. Outside players may be invited to fill roster spots — register your interest below.</p>
+          <span class="trip-card__badge trip-card__badge--upcoming">Teams are full</span>
+          <h3 class="trip-card__name">Surf Cup San Diego</h3>
+          <p class="trip-card__details">San Diego, CA · U12: July 25–27 · U13: July 31–Aug 3</p>
+          <p class="trip-card__desc">Apex teams are heading to one of North America's most-scouted youth showcases, competing against elite academies from across the US, Canada, and Mexico in front of college coaches and academy scouts. Interested in next year's roster? <a href="/contact" style="color:var(--gold);text-decoration:underline">Get in touch.</a></p>
         </div>
       </div>
     </div>
