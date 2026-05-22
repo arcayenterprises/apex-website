@@ -30,24 +30,24 @@
   <!-- <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE"> -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Summer 2026 Programs | Member Priority Registration | Apex Football Academy</title>
-  <meta name="description" content="Summer 2026 programs at Apex Football Academy: Summer Camp, Advanced Training Program, and Preseason Prep. Member priority registration. Surrey, BC.">
+  <title>Summer Camp Registration 2026 | Apex Football Academy</title>
+  <meta name="description" content="Apex Football Academy Summer Camp 2026 registration. Four standalone Mon–Fri camp weeks in July. Surrey, BC.">
   <meta name="robots" content="noindex, nofollow">
   <meta name="googlebot" content="noindex, nofollow">
-  <link rel="canonical" href="https://apexfootballacademy.com/summer-members-priority">
-  <link rel="alternate" hreflang="en-ca" href="https://apexfootballacademy.com/summer-members-priority">
+  <link rel="canonical" href="https://apexfootballacademy.com/summer-camp-register">
+  <link rel="alternate" hreflang="en-ca" href="https://apexfootballacademy.com/summer-camp-register">
   
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Summer 2026 Programs | Member Priority Registration | Apex Football Academy">
-  <meta property="og:description" content="Summer 2026 programs at Apex Football Academy: Summer Camp, Advanced Training Program, and Preseason Prep. Member priority registration. Surrey, BC.">
-  <meta property="og:url" content="https://apexfootballacademy.com/summer-members-priority">
+  <meta property="og:title" content="Summer Camp Registration 2026 | Apex Football Academy">
+  <meta property="og:description" content="Apex Football Academy Summer Camp 2026 registration. Four standalone Mon–Fri camp weeks in July. Surrey, BC.">
+  <meta property="og:url" content="https://apexfootballacademy.com/summer-camp-register">
   <meta property="og:site_name" content="Apex Football Academy">
   <meta property="og:locale" content="en_CA">
   <meta property="og:image" content="/images/hero.jpg">
   
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Summer 2026 Programs | Member Priority Registration | Apex Football Academy">
-  <meta name="twitter:description" content="Summer 2026 programs at Apex Football Academy: Summer Camp, Advanced Training Program, and Preseason Prep. Member priority registration. Surrey, BC.">
+  <meta name="twitter:title" content="Summer Camp Registration 2026 | Apex Football Academy">
+  <meta name="twitter:description" content="Apex Football Academy Summer Camp 2026 registration. Four standalone Mon–Fri camp weeks in July. Surrey, BC.">
   
   <link rel="icon" href="" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -497,6 +497,103 @@
       .summer-hero__ctas a { width: 100%; text-align: center; }
     }
   </style>
+
+  <style>
+    /* Back-to-programs link in hero */
+    .back-link {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase;
+      color: var(--gold); text-decoration: none;
+      margin-bottom: 32px;
+      transition: opacity 0.2s;
+    }
+    .back-link:hover { opacity: 0.7; }
+    .back-link::before { content: '←'; font-size: 16px; }
+
+    /* Two-column registration layout */
+    .reg-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 56px;
+      align-items: start;
+    }
+    .reg-form-wrap {
+      position: sticky; top: 96px;
+    }
+    @media (max-width: 960px) {
+      .reg-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .reg-form-wrap { position: static; }
+    }
+
+    /* Form embed shell — matches site card aesthetic */
+    .reg-form-frame {
+      background: #fff;
+      border: 1px solid rgba(0,0,0,0.08);
+      padding: 4px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+    }
+    .program-section--dark .reg-form-frame {
+      background: #1a1a1a;
+      border-color: rgba(195,158,109,0.2);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    }
+    .reg-form-frame iframe {
+      display: block; width: 100% !important;
+      border: 0; background: transparent;
+    }
+
+    /* Compact pricing summary lines (used on Advanced Training reg page) */
+    .price-line {
+      display: flex; justify-content: space-between; align-items: baseline;
+      padding: 16px 0;
+      border-bottom: 1px solid rgba(195,158,109,0.2);
+    }
+    .price-line:last-of-type { border-bottom: 0; }
+    .price-line__label {
+      font-size: 15px; font-weight: 500;
+    }
+    .program-section--light .price-line__label { color: var(--black); }
+    .program-section--dark .price-line__label { color: #fff; }
+    .price-line__value {
+      font-size: 22px; font-weight: 500;
+      color: var(--gold); letter-spacing: -0.5px;
+    }
+
+    /* Compact pricing block (used on Preseason reg page) */
+    .price-block {
+      padding: 28px 0;
+      border-top: 2px solid var(--gold);
+      border-bottom: 2px solid var(--gold);
+      margin: 32px 0;
+      text-align: center;
+    }
+    .price-block__amount {
+      font-size: clamp(36px, 5vw, 48px);
+      font-weight: 300; color: var(--gold);
+      letter-spacing: -1px; line-height: 1;
+      margin-bottom: 8px;
+    }
+    .price-block__period {
+      font-size: 13px; letter-spacing: 2px; text-transform: uppercase;
+    }
+    .program-section--light .price-block__period { color: #666; }
+    .program-section--dark .price-block__period { color: rgba(255,255,255,0.6); }
+
+    /* Pricing note line for Advanced */
+    .pricing-note-line {
+      margin-top: 16px;
+      padding: 14px 18px;
+      background: rgba(195,158,109,0.08);
+      border-left: 3px solid var(--gold);
+      font-size: 14px; line-height: 1.6;
+      font-style: italic;
+    }
+    .program-section--light .pricing-note-line { color: #444; }
+    .program-section--dark .pricing-note-line { color: rgba(255,255,255,0.8); }
+  </style>
 </head>
 <body>
 
@@ -530,364 +627,89 @@
   <a href="/#assessment" class="btn-gold nav__mobile-cta">Book a Trial Assessment</a>
 </div>
 
+
 <!-- ===== HERO ===== -->
-<section class="summer-hero" id="top">
+<section class="summer-hero">
   <div class="summer-hero__inner fade-in">
-    <div class="summer-hero__label">Apex Football Academy</div>
-    <h1 class="summer-hero__title">Summer 2026 Programs</h1>
-    <p class="summer-hero__sub">Three programs. One summer. Built for players who want more than a break between seasons.</p>
+    <a href="/summer-members-priority" class="back-link">Back to Summer Programs</a>
+    <div class="summer-hero__label">Summer 2026</div>
+    <h1 class="summer-hero__title">Summer Camp Registration</h1>
+    <p class="summer-hero__sub">Five days. Two and a half hours a day. Real training. Apply for your player below — placements are made once players are grouped by age.</p>
     <div class="summer-hero__badges">
-      <span class="summer-hero__badge">July 6 – August 28</span>
-      <span class="summer-hero__badge">Surrey, BC</span>
-      <span class="summer-hero__badge">Ages 2010 – 2019</span>
-      <span class="summer-hero__badge summer-hero__badge--featured">Existing Members – Priority Registration</span>
-    </div>
-    <div class="summer-hero__ctas">
-      <a href="#camp" class="btn-gold">View Programs</a>
-      <a href="mailto:admin@apexfootballacademy.com" class="btn-outline">Questions? Contact Us</a>
+      <span class="summer-hero__badge">July 6, 13, 20 & 27</span>
+      <span class="summer-hero__badge">9:00 – 11:30 AM</span>
+      <span class="summer-hero__badge">Born 2019 or older</span>
+      <span class="summer-hero__badge summer-hero__badge--featured">Limited spots</span>
     </div>
   </div>
 </section>
 
-<!-- ===== STICKY TAB NAV ===== -->
-<nav class="summer-tabs" aria-label="Program navigation">
-  <div class="summer-tabs__inner">
-    <a href="#camp" class="summer-tabs__link" data-tab="camp">Summer Camp</a>
-    <a href="#advanced" class="summer-tabs__link" data-tab="advanced">Advanced Training</a>
-    <a href="#preseason" class="summer-tabs__link" data-tab="preseason">Preseason Prep</a>
-    <a href="#faq" class="summer-tabs__link" data-tab="faq">FAQ</a>
-  </div>
-</nav>
+<!-- ===== TWO-COLUMN REGISTRATION ===== -->
+<section class="program-section program-section--light">
+  <div class="program-section__inner" style="max-width:1200px">
+    <div class="reg-layout fade-in">
 
-<!-- ===== PROGRAM 01 — SUMMER CAMP ===== -->
-<section class="program-section program-section--light" id="camp">
-  <div class="program-section__inner">
-    <div class="fade-in">
-      <span class="program-status program-status--open">Open Registration</span>
-      <div class="program-section__num">Program 01</div>
-      <h2 class="program-section__title">Summer Camp</h2>
-      <p class="program-section__desc">Four standalone Mon–Fri camp weeks running throughout July. Built for players born 2019 or older who want consistent touches, real coaching, and a structured environment when school is out. Sign up for one week or stack multiple at a discount.</p>
-    </div>
-
-    <div class="spec-grid fade-in">
-      <div class="spec-cell">
-        <div class="spec-cell__label">Dates</div>
-        <div class="spec-cell__value">Jul 6, 13, 20 & 27</div>
-      </div>
-      <div class="spec-cell">
-        <div class="spec-cell__label">Format</div>
-        <div class="spec-cell__value">Mon–Fri each week</div>
-      </div>
-      <div class="spec-cell">
-        <div class="spec-cell__label">Time</div>
-        <div class="spec-cell__value">9:00 – 11:30 AM</div>
-      </div>
-      <div class="spec-cell">
-        <div class="spec-cell__label">Ages</div>
-        <div class="spec-cell__value">Born 2019 or older</div>
-      </div>
-      <div class="spec-cell">
-        <div class="spec-cell__label">Group size</div>
-        <div class="spec-cell__value">Limited spots</div>
-      </div>
-      <div class="spec-cell">
-        <div class="spec-cell__label">Location</div>
-        <div class="spec-cell__value">Apex Academy Surrey</div>
-      </div>
-    </div>
-
-    <div class="discount-bar fade-in">
-      <div class="discount-bar__icon">%</div>
-      <div class="discount-bar__text">
-        <div class="discount-bar__title">Multi-camp discount</div>
-        <div class="discount-bar__detail">First camp <strong>$297</strong>. Every additional week <strong>10% off</strong>. Contact us for the coupon code.</div>
-      </div>
-    </div>
-
-    <div class="pricing-card fade-in" style="margin-top:48px">
-      <div class="pricing-card__price">$297</div>
-      <div class="pricing-card__period">per week per player</div>
-      <ul class="pricing-card__features">
-        <li>5 sessions per week (Mon–Fri)</li>
-        <li>2.5 hours per session</li>
-        <li>12.5 total hours of training</li>
-        <li>UEFA-licensed methodology</li>
-        <li>Indoor and outdoor training</li>
-        <li>Limited group sizes</li>
-      </ul>
-      <a href="/summer-camp-register" class="btn-gold-full">Apply Now</a>
-      <div class="pricing-card__note">Applications are placed once players are grouped by age. Existing members receive priority access.</div>
-    </div>
-
-    <p class="small-note fade-in" style="margin-top:24px">Adding more weeks? You only pay full price for the first one — every additional week is 10% off. Contact us for the coupon code.</p>
-  </div>
-</section>
-
-<!-- ===== PROGRAM 02 — ADVANCED TRAINING ===== -->
-<section class="program-section program-section--dark" id="advanced">
-  <div class="program-section__inner">
-    <div class="fade-in">
-      <span class="program-status program-status--invite">Invite / Apply Only</span>
-      <div class="program-section__num">Program 02</div>
-      <h2 class="program-section__title">Advanced Training Program</h2>
-      <p class="program-section__desc">A full month of July, for players born 2017 or older already training at a competitive level. Choose 1x or 2x per week. Designed for committed players whose summer is part of a development plan, not a break from one.</p>
-    </div>
-
-    <div class="session-options fade-in">
-      <div class="session-option">
-        <div class="session-option__time">Afternoon Session</div>
-        <div class="session-option__hours">12:00 – 1:30 PM</div>
-      </div>
-      <div class="session-option">
-        <div class="session-option__time">Evening Session</div>
-        <div class="session-option__hours">5:30 – 7:00 PM</div>
-      </div>
-    </div>
-
-    <div class="spec-grid fade-in">
-      <div class="spec-cell">
-        <div class="spec-cell__label">Program Period</div>
-        <div class="spec-cell__value">Jul 6 – Jul 31</div>
-      </div>
-      <div class="spec-cell">
-        <div class="spec-cell__label">Session Length</div>
-        <div class="spec-cell__value">1.5 hours</div>
-      </div>
-      <div class="spec-cell">
-        <div class="spec-cell__label">Ages</div>
-        <div class="spec-cell__value">Born 2017 or older (Advanced)</div>
-      </div>
-      <div class="spec-cell">
-        <div class="spec-cell__label">Group size</div>
-        <div class="spec-cell__value">Limited spots</div>
-      </div>
-    </div>
-
-    <div class="pricing-pair fade-in">
-      <div class="pricing-card">
-        <div class="pricing-card__price">$349</div>
-        <div class="pricing-card__period">1x per week</div>
-        <ul class="pricing-card__features">
-          <li>4 sessions over July</li>
-          <li>6 total hours</li>
-          <li>Choose afternoon OR evening</li>
-          <li>Limited group sizes</li>
-          <li>UEFA-licensed methodology</li>
-        </ul>
-        <a href="/summer-advanced-register" class="btn-outline-full">Apply for This Program</a>
-      </div>
-      <div class="pricing-card pricing-card--featured">
-        <div class="pricing-card__price">$497</div>
-        <div class="pricing-card__period">2x per week</div>
-        <ul class="pricing-card__features">
-          <li>8 sessions over July</li>
-          <li>12 total hours</li>
-          <li>Afternoon AND evening</li>
-          <li>Best value per session</li>
-          <li>Limited group sizes</li>
-        </ul>
-        <a href="/summer-advanced-register" class="btn-gold-full">Apply for This Program</a>
-      </div>
-    </div>
-
-    <p class="small-note fade-in" style="margin-top:32px">Application or invite required. Players must be at a competitive training level. Apex coaching staff will review submissions and confirm placement.</p>
-  </div>
-</section>
-
-<!-- ===== PROGRAM 03 — PRESEASON PREP ===== -->
-<section class="program-section program-section--light" id="preseason">
-  <div class="program-section__inner">
-    <div class="fade-in">
-      <span class="program-status program-status--apply">Application Required</span>
-      <div class="program-section__num">Program 03</div>
-      <h2 class="program-section__title">Preseason Prep Program</h2>
-      <p class="program-section__desc">Three weeks before the fall season kicks off. Soccer training plus athletic development with professional trainers on a separate day. Morning and evening groups so it fits around family schedules. Built for players going into a serious season who don't want to start cold.</p>
-    </div>
-
-    <div class="structure-boxes fade-in">
-      <div class="structure-box">
-        <div class="structure-box__label">Component 01</div>
-        <div class="structure-box__title">Soccer Training</div>
-        <div class="structure-box__detail">2 hours · Led by Technical Director Siamak · 1x per week</div>
-      </div>
-      <div class="structure-box">
-        <div class="structure-box__label">Component 02</div>
-        <div class="structure-box__title">Athletic Development</div>
-        <div class="structure-box__detail">1 hour · Led by professional athletic trainers · 1x per week on a separate day</div>
-      </div>
-    </div>
-
-    <div class="spec-grid fade-in">
-      <div class="spec-cell">
-        <div class="spec-cell__label">Dates</div>
-        <div class="spec-cell__value">Aug 10 – Aug 28</div>
-      </div>
-      <div class="spec-cell">
-        <div class="spec-cell__label">Duration</div>
-        <div class="spec-cell__value">3 weeks</div>
-      </div>
-      <div class="spec-cell">
-        <div class="spec-cell__label">Morning Group</div>
-        <div class="spec-cell__value">9:00 – 11:00 AM</div>
-      </div>
-      <div class="spec-cell">
-        <div class="spec-cell__label">Evening Group</div>
-        <div class="spec-cell__value">7:00 – 9:00 PM</div>
-      </div>
-      <div class="spec-cell">
-        <div class="spec-cell__label">Training Days</div>
-        <div class="spec-cell__value">Mon–Fri (confirmed by group)</div>
-      </div>
-      <div class="spec-cell">
-        <div class="spec-cell__label">Ages</div>
-        <div class="spec-cell__value">Born 2010–2017 (Advanced)</div>
-      </div>
-      <div class="spec-cell">
-        <div class="spec-cell__label">Group size</div>
-        <div class="spec-cell__value">Limited spots</div>
-      </div>
-    </div>
-
-    <div class="pricing-card fade-in" style="margin-top:32px">
-      <div class="pricing-card__price">$479</div>
-      <div class="pricing-card__period">per player · 3 weeks</div>
-      <ul class="pricing-card__features">
-        <li>3 soccer sessions × 2 hours</li>
-        <li>3 Athletic Development sessions × 1 hour</li>
-        <li>9 total hours of structured prep</li>
-        <li>Led by Technical Director Siamak</li>
-        <li>Athletic development with pro trainers</li>
-        <li>Choose AM or PM group</li>
-        <li>Limited group sizes</li>
-      </ul>
-      <a href="/summer-preseason-apply" class="btn-gold-full">Apply for Preseason Prep</a>
-      <div class="pricing-card__note">Application required. Placement by assessment only.</div>
-    </div>
-
-    <p class="small-note fade-in" style="margin-top:24px">Specific training days within Monday–Friday will be confirmed once players are grouped by age and skill level.</p>
-
-    <div class="td-bio fade-in">
+      <!-- LEFT: program details -->
       <div>
-        <div class="td-bio__name">Siamak Hashemi</div>
-        <div class="td-bio__role">Owner & Technical Director</div>
-        <div class="td-bio__text">UEFA Licensed. European-trained methodology. Former Vancouver Whitecaps Prospects coach with 10+ years coaching elite youth in Vancouver, BC. Personally leads every Preseason Prep session.</div>
-      </div>
-    </div>
-  </div>
-</section>
+        <div class="program-section__num">Program Summary</div>
+        <h2 class="program-section__title" style="font-size:clamp(28px,4vw,40px);margin-bottom:24px">Summer Camp</h2>
 
-<!-- ===== SUMMER AT A GLANCE ===== -->
-<section class="program-section program-section--dark">
-  <div class="program-section__inner">
-    <div class="fade-in" style="text-align:center;max-width:680px;margin:0 auto">
-      <div class="program-section__num">Summer at a Glance</div>
-      <h2 class="program-section__title">Three programs. Plan your summer.</h2>
-    </div>
-
-    <div class="glance-grid fade-in">
-      <div class="glance-card">
-        <div class="glance-card__num">Program 01</div>
-        <div class="glance-card__name">Summer Camp</div>
-        <div class="glance-card__price">$297<span style="font-size:14px;color:rgba(255,255,255,0.55);font-weight:400">/week</span></div>
-        <div class="glance-card__detail">10% off every additional week<br>Weeks of Jul 6, 13, 20 & 27</div>
-        <div class="glance-card__status">Open Registration</div>
-      </div>
-      <div class="glance-card">
-        <div class="glance-card__num">Program 02</div>
-        <div class="glance-card__name">Advanced Training</div>
-        <div class="glance-card__price">$349<span style="font-size:14px;color:rgba(255,255,255,0.55);font-weight:400"> / $497</span></div>
-        <div class="glance-card__detail">1x or 2x per week<br>Full month of July</div>
-        <div class="glance-card__status">Invite / Apply Only</div>
-      </div>
-      <div class="glance-card">
-        <div class="glance-card__num">Program 03</div>
-        <div class="glance-card__name">Preseason Prep</div>
-        <div class="glance-card__price">$479</div>
-        <div class="glance-card__detail">3 weeks · Aug 10–28<br>AM or PM groups available</div>
-        <div class="glance-card__status">Application Required</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== FAQ ===== -->
-<section class="program-section program-section--dark" id="faq">
-  <div class="program-section__inner" style="max-width:820px">
-    <div class="fade-in" style="text-align:center;margin-bottom:48px">
-      <div class="program-section__num">FAQ</div>
-      <h2 class="program-section__title">Common questions.</h2>
-    </div>
-
-    <div class="fade-in">
-      <div class="faq-item">
-        <div class="faq-item__q" onclick="toggleFaq(this)">
-          <span>Can my child do more than one program?</span>
-          <span class="faq-item__icon">+</span>
+        <div class="spec-grid">
+          <div class="spec-cell">
+            <div class="spec-cell__label">Dates</div>
+            <div class="spec-cell__value">Jul 6, 13, 20 & 27</div>
+          </div>
+          <div class="spec-cell">
+            <div class="spec-cell__label">Format</div>
+            <div class="spec-cell__value">Mon–Fri each week</div>
+          </div>
+          <div class="spec-cell">
+            <div class="spec-cell__label">Time</div>
+            <div class="spec-cell__value">9:00 – 11:30 AM</div>
+          </div>
+          <div class="spec-cell">
+            <div class="spec-cell__label">Ages</div>
+            <div class="spec-cell__value">Born 2019 or older</div>
+          </div>
+          <div class="spec-cell">
+            <div class="spec-cell__label">Group size</div>
+            <div class="spec-cell__value">Limited spots</div>
+          </div>
+          <div class="spec-cell">
+            <div class="spec-cell__label">Location</div>
+            <div class="spec-cell__value">Apex Academy Surrey</div>
+          </div>
         </div>
-        <div class="faq-item__a">
-          <p>Yes. Many families combine Summer Camp weeks with the Preseason Prep program later in August — they're scheduled deliberately so they don't overlap. The Advanced Training Program runs through July alongside Summer Camp, so some advanced players do both. Email us if you want help putting a plan together.</p>
+
+        <div class="discount-bar">
+          <div class="discount-bar__icon">%</div>
+          <div class="discount-bar__text">
+            <div class="discount-bar__title">Multi-camp discount</div>
+            <div class="discount-bar__detail">First camp week <strong>$297</strong>. Every additional week <strong>10% off</strong>. Contact us for the coupon code.</div>
+          </div>
+        </div>
+
+        <p class="small-note" style="margin-top:24px">Applications are placed once players are grouped by age. Existing members receive priority access.</p>
+      </div>
+
+      <!-- RIGHT: form -->
+      <div class="reg-form-wrap">
+        <div class="program-section__num" style="margin-bottom:12px">Application</div>
+        <h3 style="font-size:24px;font-weight:500;letter-spacing:-0.5px;margin-bottom:20px;color:var(--black)">Submit Your Application</h3>
+        <div class="reg-form-frame">
+          <iframe src="https://form.jotform.com/261415167250047" style="width:100%;min-height:700px;border:none;" scrolling="no" title="Summer Camp Registration Form"></iframe>
         </div>
       </div>
 
-      <div class="faq-item">
-        <div class="faq-item__q" onclick="toggleFaq(this)">
-          <span>How does the multi-camp discount work?</span>
-          <span class="faq-item__icon">+</span>
-        </div>
-        <div class="faq-item__a">
-          <p>Pay full price ($297) for your first week of Summer Camp. Every additional week you register for is 10% off. Contact us for the coupon code to apply at checkout. There's no cap — stack as many weeks as you want.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-item__q" onclick="toggleFaq(this)">
-          <span>Who is the Advanced Training Program for?</span>
-          <span class="faq-item__icon">+</span>
-        </div>
-        <div class="faq-item__a">
-          <p>Players born 2017 or earlier who are already training at a competitive level — typically academy or top-tier club players. The program is invite-only or by application because group sizes are kept limited and the sessions assume a strong technical baseline. If you're unsure whether your child qualifies, email us and we'll set up a quick conversation.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-item__q" onclick="toggleFaq(this)">
-          <span>What is the Preseason Prep program and who should apply?</span>
-          <span class="faq-item__icon">+</span>
-        </div>
-        <div class="faq-item__a">
-          <p>Three weeks of structured training designed to get players ready for the fall season. It combines soccer technical work (led by Technical Director Siamak) with separate athletic development sessions led by professional athletic trainers. It's for committed players born 2010–2017 going into a serious competitive season. Placement is by assessment to ensure the group is balanced.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-item__q" onclick="toggleFaq(this)">
-          <span>Do existing Apex members get priority?</span>
-          <span class="faq-item__icon">+</span>
-        </div>
-        <div class="faq-item__a">
-          <p>Yes. Current Apex Academy members get first access to all three summer programs before registration opens to outside players. Group sizes are kept limited across every program, so priority access matters — many sessions fill before public registration even opens.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-item__q" onclick="toggleFaq(this)">
-          <span>Is there a refund policy?</span>
-          <span class="faq-item__icon">+</span>
-        </div>
-        <div class="faq-item__a">
-          <p>Full refund up to 14 days before your program's start date. Within 14 days, refunds are issued as Apex credit applicable to any future program. No refunds once the program has started, except in cases of injury or extended illness — email us and we'll work something out.</p>
-        </div>
-      </div>
     </div>
   </div>
 </section>
 
 <!-- ===== GOLD CTA STRIP ===== -->
 <section class="gold-cta-strip">
-  <h2 class="gold-cta-strip__title">Questions before you register? We are happy to help.</h2>
+  <h2 class="gold-cta-strip__title">Questions about the camp? We are happy to help.</h2>
   <a href="mailto:admin@apexfootballacademy.com" class="gold-cta-strip__btn">Contact the Academy</a>
 </section>
-
 <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Scroll to top">↑</button>
 <!-- ===== FOOTER ===== -->
 <footer class="footer" role="contentinfo">
@@ -1026,24 +848,5 @@
 
 <script src="/script.js"></script>
 
-<script>
-  // Active tab on scroll for sticky tab nav
-  (function() {
-    const tabs = document.querySelectorAll('.summer-tabs__link');
-    const sections = ['camp', 'advanced', 'preseason', 'faq'].map(id => document.getElementById(id)).filter(Boolean);
-    if (!tabs.length || !sections.length) return;
-
-    function updateActive() {
-      const scrollPos = window.scrollY + 200;
-      let active = sections[0].id;
-      for (const sec of sections) {
-        if (sec.offsetTop <= scrollPos) active = sec.id;
-      }
-      tabs.forEach(t => t.classList.toggle('active', t.dataset.tab === active));
-    }
-    window.addEventListener('scroll', updateActive, { passive: true });
-    updateActive();
-  })();
-</script>
 </body>
 </html>
