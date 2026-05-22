@@ -715,7 +715,17 @@
         <div class="program-section__num" style="margin-bottom:12px">Application</div>
         <h3 style="font-size:24px;font-weight:500;letter-spacing:-0.5px;margin-bottom:20px;color:var(--black)">Submit Your Application</h3>
         <div class="reg-form-frame">
-          <iframe src="https://form.jotform.com/261415582261050" style="width:100%;min-height:800px;border:none;" scrolling="no" title="Preseason Prep Program Application Form"></iframe>
+          <iframe
+            id="JotFormIFrame-261415582261050"
+            title="Apex Football Academy Registration Form"
+            onload="window.parent.scrollTo(0,0)"
+            allowtransparency="true"
+            allow="geolocation; microphone; camera; fullscreen; payment"
+            src="https://form.jotform.com/261415582261050"
+            frameborder="0"
+            style="min-width:100%;max-width:100%;height:539px;border:none;"
+            scrolling="no"
+          ></iframe>
         </div>
       </div>
 
@@ -865,6 +875,10 @@
 </script>
 
 <script src="/script.js"></script>
+
+
+<script src="https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js"></script>
+<script>window.jotformEmbedHandler && window.jotformEmbedHandler("iframe[id^='JotFormIFrame-']", "https://form.jotform.com/")</script>
 
 </body>
 </html>
