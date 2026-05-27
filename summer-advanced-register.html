@@ -593,7 +593,36 @@
     }
     .program-section--light .pricing-note-line { color: #444; }
     .program-section--dark .pricing-note-line { color: rgba(255,255,255,0.8); }
-  </style>
+  
+    /* Prominent invite-only banner */
+    .invite-banner {
+      display: flex; align-items: center; gap: 20px;
+      padding: 22px 28px;
+      background: linear-gradient(135deg, rgba(195,158,109,0.18), rgba(195,158,109,0.06));
+      border: 2px solid var(--gold);
+      border-left-width: 6px;
+      margin: 0 0 32px;
+      flex-wrap: wrap;
+    }
+    .invite-banner__icon {
+      width: 48px; height: 48px; flex-shrink: 0;
+      background: var(--gold); color: #000;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 22px; font-weight: 700;
+      border-radius: 4px;
+    }
+    .invite-banner__text { flex: 1; min-width: 240px; }
+    .invite-banner__title {
+      font-size: 16px; font-weight: 700;
+      letter-spacing: 2px; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 4px;
+    }
+    .invite-banner__detail {
+      font-size: 14px; line-height: 1.5;
+    }
+    .program-section--light .invite-banner__detail { color: #444; }
+    .program-section--dark .invite-banner__detail { color: rgba(255,255,255,0.85); }
+</style>
 </head>
 <body>
 
@@ -611,7 +640,7 @@
       <a href="/facility" class="nav__link">Facility</a>
       <a href="/about" class="nav__link">About</a>
       <a href="/partnerships" class="nav__link">Partners</a>
-      <a href="/events" class="nav__link">Events</a>
+      <a href="/events" class="nav__link">Events / Camps</a>
       <a href="/contact" class="nav__link">Contact</a>
       <a href="/#assessment" class="btn-gold nav__cta">Book a Trial</a>
   </div>
@@ -621,7 +650,7 @@
   <a href="/facility" class="nav__mobile-link">Facility</a>
   <a href="/about" class="nav__mobile-link">About</a>
   <a href="/partnerships" class="nav__mobile-link">Partners</a>
-  <a href="/events" class="nav__mobile-link">Events</a>
+  <a href="/events" class="nav__mobile-link">Events / Camps</a>
   <a href="/contact" class="nav__mobile-link">Contact</a>
   <a href="/faq" class="nav__mobile-link">FAQ</a>
   <a href="/#assessment" class="btn-gold nav__mobile-cta">Book a Trial Assessment</a>
@@ -634,10 +663,10 @@
     <a href="/summer-members-priority" class="back-link">Back to Summer Programs</a>
     <div class="summer-hero__label">Summer 2026</div>
     <h1 class="summer-hero__title">Advanced Training Program</h1>
-    <p class="summer-hero__sub">July 6 – July 31. Invite and application only. For players born 2017 or older training at a competitive level.</p>
+    <p class="summer-hero__sub">July 6 – July 31. <strong style="color:var(--gold)">Invite only — you must apply.</strong> For players born 2017 or older training at a competitive level.</p>
     <div class="summer-hero__badges">
       <span class="summer-hero__badge">July 6 – July 31</span>
-      <span class="summer-hero__badge">12:00 PM or 5:30 PM</span>
+      <span class="summer-hero__badge">5:30 – 6:45 PM</span>
       <span class="summer-hero__badge">Born 2017 or older</span>
       <span class="summer-hero__badge summer-hero__badge--featured">Limited spots</span>
     </div>
@@ -651,17 +680,20 @@
 
       <!-- LEFT: program details -->
       <div>
+        <div class="invite-banner fade-in">
+      <div class="invite-banner__icon">!</div>
+      <div class="invite-banner__text">
+        <div class="invite-banner__title">Invite Only — You Must Apply</div>
+        <div class="invite-banner__detail">This program is not open registration. Submit an application below and the Apex coaching staff will review and confirm placement.</div>
+      </div>
+    </div>
         <div class="program-section__num">Program Summary</div>
         <h2 class="program-section__title" style="font-size:clamp(28px,4vw,40px);margin-bottom:24px">Advanced Training</h2>
 
         <div class="session-options" style="margin:0 0 32px">
           <div class="session-option">
-            <div class="session-option__time">Afternoon Session</div>
-            <div class="session-option__hours">12:00 – 1:30 PM</div>
-          </div>
-          <div class="session-option">
             <div class="session-option__time">Evening Session</div>
-            <div class="session-option__hours">5:30 – 7:00 PM</div>
+            <div class="session-option__hours">5:30 – 6:45 PM</div>
           </div>
         </div>
 
@@ -687,19 +719,19 @@
         <div style="margin-top:32px">
           <div class="price-line">
             <span class="price-line__label">1× per week</span>
-            <span class="price-line__value">$349</span>
+            <span class="price-line__value">$349 <span style="font-size:0.55em;font-weight:400;color:rgba(195,158,109,0.75);letter-spacing:1px">+ GST</span></span>
           </div>
           <div class="price-line">
             <span class="price-line__label">2× per week <span style="font-size:11px;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-left:8px">Best Value</span></span>
-            <span class="price-line__value">$497</span>
+            <span class="price-line__value">$497 <span style="font-size:0.55em;font-weight:400;color:rgba(195,158,109,0.75);letter-spacing:1px">+ GST</span></span>
           </div>
         </div>
 
         <div class="pricing-note-line">
-          Select your preferred frequency (1× or 2× per week) and session time on the application form.
+          Select your preferred frequency (1× or 2× per week) on the application form.
         </div>
 
-        <p class="small-note" style="margin-top:24px">Application or invite required. Players must be at a competitive training level. Apex coaching staff will review submissions and confirm placement.</p>
+        <p class="small-note" style="margin-top:24px">All prices in CAD plus 5% GST. Application or invite required. Players must be at a competitive training level. Apex coaching staff will review submissions and confirm placement.</p>
       </div>
 
       <!-- RIGHT: form -->

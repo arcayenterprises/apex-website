@@ -593,7 +593,36 @@
     }
     .program-section--light .pricing-note-line { color: #444; }
     .program-section--dark .pricing-note-line { color: rgba(255,255,255,0.8); }
-  </style>
+  
+    /* Prominent invite-only banner */
+    .invite-banner {
+      display: flex; align-items: center; gap: 20px;
+      padding: 22px 28px;
+      background: linear-gradient(135deg, rgba(195,158,109,0.18), rgba(195,158,109,0.06));
+      border: 2px solid var(--gold);
+      border-left-width: 6px;
+      margin: 0 0 32px;
+      flex-wrap: wrap;
+    }
+    .invite-banner__icon {
+      width: 48px; height: 48px; flex-shrink: 0;
+      background: var(--gold); color: #000;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 22px; font-weight: 700;
+      border-radius: 4px;
+    }
+    .invite-banner__text { flex: 1; min-width: 240px; }
+    .invite-banner__title {
+      font-size: 16px; font-weight: 700;
+      letter-spacing: 2px; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 4px;
+    }
+    .invite-banner__detail {
+      font-size: 14px; line-height: 1.5;
+    }
+    .program-section--light .invite-banner__detail { color: #444; }
+    .program-section--dark .invite-banner__detail { color: rgba(255,255,255,0.85); }
+</style>
 </head>
 <body>
 
@@ -611,7 +640,7 @@
       <a href="/facility" class="nav__link">Facility</a>
       <a href="/about" class="nav__link">About</a>
       <a href="/partnerships" class="nav__link">Partners</a>
-      <a href="/events" class="nav__link">Events</a>
+      <a href="/events" class="nav__link">Events / Camps</a>
       <a href="/contact" class="nav__link">Contact</a>
       <a href="/#assessment" class="btn-gold nav__cta">Book a Trial</a>
   </div>
@@ -621,7 +650,7 @@
   <a href="/facility" class="nav__mobile-link">Facility</a>
   <a href="/about" class="nav__mobile-link">About</a>
   <a href="/partnerships" class="nav__mobile-link">Partners</a>
-  <a href="/events" class="nav__mobile-link">Events</a>
+  <a href="/events" class="nav__mobile-link">Events / Camps</a>
   <a href="/contact" class="nav__mobile-link">Contact</a>
   <a href="/faq" class="nav__mobile-link">FAQ</a>
   <a href="/#assessment" class="btn-gold nav__mobile-cta">Book a Trial Assessment</a>
@@ -634,7 +663,7 @@
     <a href="/summer-members-priority" class="back-link">Back to Summer Programs</a>
     <div class="summer-hero__label">Summer 2026</div>
     <h1 class="summer-hero__title">Preseason Prep Program</h1>
-    <p class="summer-hero__sub">August 10 – August 28. Led by Technical Director Siamak. Application and assessment required.</p>
+    <p class="summer-hero__sub">August 10 – August 28. Led by Technical Director Siamak. <strong style="color:var(--gold)">Invite only — you must apply.</strong> Placement by assessment.</p>
     <div class="summer-hero__badges">
       <span class="summer-hero__badge">August 10 – August 28</span>
       <span class="summer-hero__badge">Morning & Evening Groups</span>
@@ -651,6 +680,13 @@
 
       <!-- LEFT: program details -->
       <div>
+        <div class="invite-banner fade-in">
+      <div class="invite-banner__icon">!</div>
+      <div class="invite-banner__text">
+        <div class="invite-banner__title">Invite Only — You Must Apply</div>
+        <div class="invite-banner__detail">This program is not open registration. Submit an application below and the Apex coaching staff will review and confirm placement.</div>
+      </div>
+    </div>
         <div class="program-section__num">Program Summary</div>
         <h2 class="program-section__title" style="font-size:clamp(28px,4vw,40px);margin-bottom:24px">Preseason Prep</h2>
 
@@ -695,11 +731,11 @@
         </div>
 
         <div class="price-block">
-          <div class="price-block__amount">$479</div>
+          <div class="price-block__amount">$479<span style="font-size:0.42em;font-weight:400;color:rgba(195,158,109,0.7);letter-spacing:1px;margin-left:6px;vertical-align:middle">+ GST</span></div>
           <div class="price-block__period">per player · full 3-week program</div>
         </div>
 
-        <p class="small-note" style="margin-top:8px">Specific training days within Monday–Friday will be confirmed once players are grouped by age and skill level. Placement is by assessment only.</p>
+        <p class="small-note" style="margin-top:8px">All prices in CAD plus 5% GST. Specific training days within Monday–Friday will be confirmed once players are grouped by age and skill level. Placement is by assessment only.</p>
 
         <div class="td-bio" style="margin-top:32px">
           <div>

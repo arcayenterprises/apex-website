@@ -496,7 +496,36 @@
       .summer-hero__ctas { flex-direction: column; align-items: stretch; }
       .summer-hero__ctas a { width: 100%; text-align: center; }
     }
-  </style>
+  
+    /* Prominent invite-only banner */
+    .invite-banner {
+      display: flex; align-items: center; gap: 20px;
+      padding: 22px 28px;
+      background: linear-gradient(135deg, rgba(195,158,109,0.18), rgba(195,158,109,0.06));
+      border: 2px solid var(--gold);
+      border-left-width: 6px;
+      margin: 0 0 32px;
+      flex-wrap: wrap;
+    }
+    .invite-banner__icon {
+      width: 48px; height: 48px; flex-shrink: 0;
+      background: var(--gold); color: #000;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 22px; font-weight: 700;
+      border-radius: 4px;
+    }
+    .invite-banner__text { flex: 1; min-width: 240px; }
+    .invite-banner__title {
+      font-size: 16px; font-weight: 700;
+      letter-spacing: 2px; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 4px;
+    }
+    .invite-banner__detail {
+      font-size: 14px; line-height: 1.5;
+    }
+    .program-section--light .invite-banner__detail { color: #444; }
+    .program-section--dark .invite-banner__detail { color: rgba(255,255,255,0.85); }
+</style>
 </head>
 <body>
 
@@ -514,7 +543,7 @@
       <a href="/facility" class="nav__link">Facility</a>
       <a href="/about" class="nav__link">About</a>
       <a href="/partnerships" class="nav__link">Partners</a>
-      <a href="/events" class="nav__link">Events</a>
+      <a href="/events" class="nav__link">Events / Camps</a>
       <a href="/contact" class="nav__link">Contact</a>
       <a href="/#assessment" class="btn-gold nav__cta">Book a Trial</a>
   </div>
@@ -524,7 +553,7 @@
   <a href="/facility" class="nav__mobile-link">Facility</a>
   <a href="/about" class="nav__mobile-link">About</a>
   <a href="/partnerships" class="nav__mobile-link">Partners</a>
-  <a href="/events" class="nav__mobile-link">Events</a>
+  <a href="/events" class="nav__mobile-link">Events / Camps</a>
   <a href="/contact" class="nav__mobile-link">Contact</a>
   <a href="/faq" class="nav__mobile-link">FAQ</a>
   <a href="/#assessment" class="btn-gold nav__mobile-cta">Book a Trial Assessment</a>
@@ -600,22 +629,21 @@
       <div class="discount-bar__icon">%</div>
       <div class="discount-bar__text">
         <div class="discount-bar__title">Multi-camp discount</div>
-        <div class="discount-bar__detail">First camp <strong>$297</strong>. Every additional week <strong>10% off</strong>. Contact us for the coupon code.</div>
+        <div class="discount-bar__detail">First camp <strong>$297 + GST</strong>. Every additional week <strong>10% off</strong>. Contact us for the coupon code.</div>
       </div>
     </div>
 
     <div class="pricing-card fade-in" style="margin-top:48px">
-      <div class="pricing-card__price">$297</div>
+      <div class="pricing-card__price">$297<span style="font-size:0.42em;font-weight:400;color:rgba(195,158,109,0.7);letter-spacing:1px;margin-left:6px;vertical-align:middle">+ GST</span></div>
       <div class="pricing-card__period">per week per player</div>
       <ul class="pricing-card__features">
         <li>5 sessions per week (Mon–Fri)</li>
         <li>2.5 hours per session</li>
         <li>12.5 total hours of training</li>
         <li>UEFA-licensed methodology</li>
-        <li>Indoor and outdoor training</li>
         <li>Limited group sizes</li>
       </ul>
-      <a href="/summer-camp-register" class="btn-gold-full">Apply Now</a>
+      <a href="https://apexfootballacademy.playbookapi.com/programs/more_info/class_package/70007/" class="btn-gold-full" target="_blank" rel="noopener">Register Now</a>
       <div class="pricing-card__note">Applications are placed once players are grouped by age. Existing members receive priority access.</div>
     </div>
 
@@ -633,14 +661,19 @@
       <p class="program-section__desc">A full month of July, for players born 2017 or older already training at a competitive level. Choose 1x or 2x per week. Designed for committed players whose summer is part of a development plan, not a break from one.</p>
     </div>
 
+    
+    <div class="invite-banner fade-in">
+      <div class="invite-banner__icon">!</div>
+      <div class="invite-banner__text">
+        <div class="invite-banner__title">Invite Only — You Must Apply</div>
+        <div class="invite-banner__detail">This program is not open registration. Submit an application below and the Apex coaching staff will review and confirm placement.</div>
+      </div>
+    </div>
+
     <div class="session-options fade-in">
       <div class="session-option">
-        <div class="session-option__time">Afternoon Session</div>
-        <div class="session-option__hours">12:00 – 1:30 PM</div>
-      </div>
-      <div class="session-option">
         <div class="session-option__time">Evening Session</div>
-        <div class="session-option__hours">5:30 – 7:00 PM</div>
+        <div class="session-option__hours">5:30 – 6:45 PM</div>
       </div>
     </div>
 
@@ -665,24 +698,22 @@
 
     <div class="pricing-pair fade-in">
       <div class="pricing-card">
-        <div class="pricing-card__price">$349</div>
+        <div class="pricing-card__price">$349<span style="font-size:0.42em;font-weight:400;color:rgba(195,158,109,0.7);letter-spacing:1px;margin-left:6px;vertical-align:middle">+ GST</span></div>
         <div class="pricing-card__period">1x per week</div>
         <ul class="pricing-card__features">
           <li>4 sessions over July</li>
           <li>6 total hours</li>
-          <li>Choose afternoon OR evening</li>
           <li>Limited group sizes</li>
           <li>UEFA-licensed methodology</li>
         </ul>
         <a href="/summer-advanced-register" class="btn-outline-full">Apply for This Program</a>
       </div>
       <div class="pricing-card pricing-card--featured">
-        <div class="pricing-card__price">$497</div>
+        <div class="pricing-card__price">$497<span style="font-size:0.42em;font-weight:400;color:rgba(195,158,109,0.7);letter-spacing:1px;margin-left:6px;vertical-align:middle">+ GST</span></div>
         <div class="pricing-card__period">2x per week</div>
         <ul class="pricing-card__features">
           <li>8 sessions over July</li>
           <li>12 total hours</li>
-          <li>Afternoon AND evening</li>
           <li>Best value per session</li>
           <li>Limited group sizes</li>
         </ul>
@@ -702,6 +733,14 @@
       <div class="program-section__num">Program 03</div>
       <h2 class="program-section__title">Preseason Prep Program</h2>
       <p class="program-section__desc">Three weeks before the fall season kicks off. Soccer training plus athletic development with professional trainers on a separate day. Morning and evening groups so it fits around family schedules. Built for players going into a serious season who don't want to start cold.</p>
+    </div>
+
+    <div class="invite-banner fade-in">
+      <div class="invite-banner__icon">!</div>
+      <div class="invite-banner__text">
+        <div class="invite-banner__title">Invite Only — You Must Apply</div>
+        <div class="invite-banner__detail">This program is not open registration. Submit an application below and the Apex coaching staff will review and confirm placement.</div>
+      </div>
     </div>
 
     <div class="structure-boxes fade-in">
@@ -749,7 +788,7 @@
     </div>
 
     <div class="pricing-card fade-in" style="margin-top:32px">
-      <div class="pricing-card__price">$479</div>
+      <div class="pricing-card__price">$479<span style="font-size:0.42em;font-weight:400;color:rgba(195,158,109,0.7);letter-spacing:1px;margin-left:6px;vertical-align:middle">+ GST</span></div>
       <div class="pricing-card__period">per player · 3 weeks</div>
       <ul class="pricing-card__features">
         <li>3 soccer sessions × 2 hours</li>
@@ -788,21 +827,21 @@
       <div class="glance-card">
         <div class="glance-card__num">Program 01</div>
         <div class="glance-card__name">Summer Camp</div>
-        <div class="glance-card__price">$297<span style="font-size:14px;color:rgba(255,255,255,0.55);font-weight:400">/week</span></div>
+        <div class="glance-card__price">$297<span style="font-size:14px;color:rgba(255,255,255,0.55);font-weight:400">/week + GST</span></div>
         <div class="glance-card__detail">10% off every additional week<br>Weeks of Jul 6, 13, 20 & 27</div>
         <div class="glance-card__status">Open Registration</div>
       </div>
       <div class="glance-card">
         <div class="glance-card__num">Program 02</div>
         <div class="glance-card__name">Advanced Training</div>
-        <div class="glance-card__price">$349<span style="font-size:14px;color:rgba(255,255,255,0.55);font-weight:400"> / $497</span></div>
+        <div class="glance-card__price">$349<span style="font-size:14px;color:rgba(255,255,255,0.55);font-weight:400"> / $497 + GST</span></div>
         <div class="glance-card__detail">1x or 2x per week<br>Full month of July</div>
         <div class="glance-card__status">Invite / Apply Only</div>
       </div>
       <div class="glance-card">
         <div class="glance-card__num">Program 03</div>
         <div class="glance-card__name">Preseason Prep</div>
-        <div class="glance-card__price">$479</div>
+        <div class="glance-card__price">$479<span style="font-size:14px;color:rgba(255,255,255,0.55);font-weight:400"> + GST</span></div>
         <div class="glance-card__detail">3 weeks · Aug 10–28<br>AM or PM groups available</div>
         <div class="glance-card__status">Application Required</div>
       </div>
@@ -835,7 +874,7 @@
           <span class="faq-item__icon">+</span>
         </div>
         <div class="faq-item__a">
-          <p>Pay full price ($297) for your first week of Summer Camp. Every additional week you register for is 10% off. Contact us for the coupon code to apply at checkout. There's no cap — stack as many weeks as you want.</p>
+          <p>Pay full price ($297 + GST) for your first week of Summer Camp. Every additional week you register for is 10% off. Contact us for the coupon code to apply at checkout. There's no cap — stack as many weeks as you want.</p>
         </div>
       </div>
 
