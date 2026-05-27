@@ -622,6 +622,31 @@
     }
     .program-section--light .invite-banner__detail { color: #444; }
     .program-section--dark .invite-banner__detail { color: rgba(255,255,255,0.85); }
+
+    /* Tailored placement premium callout */
+    .tailored-callout {
+      margin: 32px 0;
+      padding: 28px 32px;
+      background: linear-gradient(135deg, rgba(195,158,109,0.12), rgba(195,158,109,0.03));
+      border-left: 4px solid var(--gold);
+      position: relative;
+    }
+    .tailored-callout__label {
+      font-size: 11px; font-weight: 700; letter-spacing: 2.5px;
+      color: var(--gold); text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .tailored-callout__title {
+      font-size: 20px; font-weight: 500; letter-spacing: -0.3px;
+      margin-bottom: 10px; line-height: 1.3;
+    }
+    .program-section--light .tailored-callout__title { color: var(--black); }
+    .program-section--dark .tailored-callout__title { color: #fff; }
+    .tailored-callout__body {
+      font-size: 14.5px; line-height: 1.7;
+    }
+    .program-section--light .tailored-callout__body { color: #444; }
+    .program-section--dark .tailored-callout__body { color: rgba(255,255,255,0.78); }
 </style>
 </head>
 <body>
@@ -735,7 +760,13 @@
           <div class="price-block__period">per player · full 3-week program</div>
         </div>
 
-        <p class="small-note" style="margin-top:8px">All prices in CAD plus 5% GST. Morning and evening soccer training options available. Players will be grouped based on coach assessment and player availability. Athletic training sessions run in the evenings only. Placement is by assessment.</p>
+        <p class="small-note" style="margin-top:8px">All prices in CAD plus 5% GST. Placement is by assessment.</p>
+
+        <div class="tailored-callout fade-in">
+      <div class="tailored-callout__label">Tailored Placement</div>
+      <div class="tailored-callout__title">Built for the player, not the schedule.</div>
+      <div class="tailored-callout__body">Apex doesn't run one-size-fits-all programs. Exact training days and groupings are based on each player's age, skill profile, and assessment results. Soccer training runs morning or evening depending on group fit; athletic development sessions are evenings only. Placement is confirmed after assessment.</div>
+    </div>
 
         <div class="td-bio" style="margin-top:32px">
           <div>
