@@ -555,11 +555,14 @@
     /* Korea page styles */
     .korea-hero {
       position: relative;
-      min-height: 100vh;
+      min-height: 520px;
       overflow: hidden;
       display: flex; align-items: center; justify-content: center;
-      background: #000;
-      padding: 120px 24px 80px;
+      background:
+        radial-gradient(ellipse at 30% 30%, rgba(195,158,109,0.14) 0%, transparent 55%),
+        radial-gradient(ellipse at 75% 75%, rgba(195,158,109,0.08) 0%, transparent 55%),
+        linear-gradient(180deg, #000 0%, #0d0d0d 100%);
+      padding: 110px 24px 70px;
     }
     /* Video background */
     .korea-hero__video {
@@ -583,8 +586,8 @@
       color: #fff;
     }
     .korea-hero__flag {
-      font-size: 56px; line-height: 1;
-      margin-bottom: 24px;
+      font-size: 44px; line-height: 1;
+      margin-bottom: 18px;
       filter: drop-shadow(0 4px 12px rgba(0,0,0,0.6));
     }
     .korea-hero__pretitle {
@@ -595,15 +598,15 @@
       color: var(--gold);
       border: 1px solid var(--gold);
       text-transform: uppercase;
-      margin-bottom: 28px;
+      margin-bottom: 22px;
       backdrop-filter: blur(6px);
     }
     .korea-hero__title {
-      font-size: clamp(44px, 8vw, 96px);
+      font-size: clamp(38px, 6vw, 72px);
       font-weight: 300; line-height: 0.95;
       letter-spacing: -2px;
       color: #fff;
-      margin-bottom: 28px;
+      margin-bottom: 20px;
       text-shadow: 0 4px 24px rgba(0,0,0,0.4);
     }
     .korea-hero__title strong {
@@ -613,14 +616,14 @@
       font-size: clamp(15px, 1.8vw, 19px); font-weight: 500;
       letter-spacing: 3px; text-transform: uppercase;
       color: rgba(255,255,255,0.85);
-      margin-bottom: 40px;
+      margin-bottom: 28px;
     }
     .korea-hero__date span { color: var(--gold); }
     .korea-hero__ctas {
       display: flex; flex-wrap: wrap; gap: 14px; justify-content: center;
     }
     .korea-hero__scarcity {
-      margin-top: 36px;
+      margin-top: 26px;
       font-size: 13px; font-weight: 500;
       letter-spacing: 2.5px; text-transform: uppercase;
       color: var(--gold);
@@ -744,26 +747,6 @@
       border: 0; background: transparent;
     }
 
-    /* Placeholder for when Jotform isn't built yet */
-    .korea-form-placeholder {
-      padding: 48px 36px;
-      text-align: center;
-      background: linear-gradient(135deg, #fafafa 0%, #f0ebe2 100%);
-    }
-    .korea-form-placeholder__label {
-      font-size: 11px; font-weight: 700; letter-spacing: 2.5px;
-      color: var(--gold); text-transform: uppercase;
-      margin-bottom: 14px;
-    }
-    .korea-form-placeholder__title {
-      font-size: 22px; font-weight: 500;
-      color: var(--black); margin-bottom: 14px;
-    }
-    .korea-form-placeholder__body {
-      font-size: 15px; line-height: 1.65;
-      color: #555; margin-bottom: 24px;
-    }
-
     /* Final gold strip */
     .korea-final {
       background: linear-gradient(135deg, var(--gold) 0%, #d4af7e 100%);
@@ -791,7 +774,7 @@
     }
 
     @media (max-width: 600px) {
-      .korea-hero { padding: 100px 20px 60px; }
+      .korea-hero { min-height: 440px; padding: 95px 20px 55px; }
       .korea-highlights, .korea-form-section { padding: 70px 20px; }
       .korea-trust { padding: 60px 20px; }
       .korea-hero__ctas { flex-direction: column; align-items: stretch; }
@@ -834,10 +817,6 @@
 
 <!-- ===== HERO WITH VIDEO BACKGROUND ===== -->
 <section class="korea-hero">
-  <!-- Background video. Replace /videos/korea-teaser.mp4 path if you upload elsewhere. -->
-  <video class="korea-hero__video" autoplay muted loop playsinline preload="auto" poster="/images/korea-teaser-poster.jpg">
-    <source src="/videos/korea-teaser.mp4" type="video/mp4">
-  </video>
   <div class="korea-hero__overlay"></div>
 
   <div class="korea-hero__inner fade-in">
@@ -908,27 +887,17 @@
     </div>
 
     <div class="korea-form-frame fade-in delay-1">
-      <!-- PLACEHOLDER: Replace this block with your Jotform iframe when ready.
-           Example replacement (uses same auto-resize handler as other forms):
-
-           <iframe
-             id="JotFormIFrame-XXXXXXXXXXXXX"
-             title="Apex Korea Trip Interest Form"
-             onload="window.parent.scrollTo(0,0)"
-             allowtransparency="true"
-             allow="geolocation; microphone; camera; fullscreen; payment"
-             src="https://form.jotform.com/XXXXXXXXXXXXX"
-             frameborder="0"
-             style="min-width:100%;max-width:100%;height:539px;border:none;"
-             scrolling="no"
-           ></iframe>
-      -->
-      <div class="korea-form-placeholder">
-        <div class="korea-form-placeholder__label">Interest Form</div>
-        <div class="korea-form-placeholder__title">Form coming online shortly.</div>
-        <div class="korea-form-placeholder__body">Email us directly to add your name to the interest list while we finalize the form.</div>
-        <a href="mailto:admin@apexfootballacademy.com?subject=Korea%20Trip%202027%20-%20Interest%20List" class="btn-gold">Email to Join the List</a>
-      </div>
+      <iframe
+        id="JotFormIFrame-261555414400044"
+        title="Apex Football Academy Korea Trip 2027 Interest Form"
+        onload="window.parent.scrollTo(0,0)"
+        allowtransparency="true"
+        allow="geolocation; microphone; camera; fullscreen; payment"
+        src="https://form.jotform.com/261555414400044"
+        frameborder="0"
+        style="min-width:100%;max-width:100%;height:539px;border:none;"
+        scrolling="no"
+      ></iframe>
     </div>
 
   </div>
