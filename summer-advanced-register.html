@@ -56,7 +56,7 @@
   <link rel="stylesheet" href="/styles.css">
 
   <style>
-    /* Hero — dark, badge-rich, two-button */
+    /* Hero . dark, badge-rich, two-button */
     .summer-hero {
       background: linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 100%);
       color: #fff;
@@ -528,7 +528,7 @@
       .reg-form-wrap { position: static; }
     }
 
-    /* Form embed shell — matches site card aesthetic */
+    /* Form embed shell . matches site card aesthetic */
     .reg-form-frame {
       background: #fff;
       border: 1px solid rgba(0,0,0,0.08);
@@ -647,6 +647,39 @@
     }
     .program-section--light .tailored-callout__body { color: #444; }
     .program-section--dark .tailored-callout__body { color: rgba(255,255,255,0.78); }
+
+    .soldout-page {
+      background: var(--light);
+      padding: 100px 24px;
+    }
+    .soldout-page__inner {
+      max-width: 720px; margin: 0 auto;
+      text-align: center;
+    }
+    .soldout-page__label {
+      display: inline-block;
+      font-size: 11px; font-weight: 700; letter-spacing: 3px;
+      padding: 8px 16px;
+      background: rgba(220,38,38,0.12);
+      color: #b91c1c;
+      border: 1px solid rgba(220,38,38,0.3);
+      text-transform: uppercase;
+      margin-bottom: 28px;
+    }
+    .soldout-page__title {
+      font-size: clamp(32px, 4.5vw, 48px);
+      font-weight: 300; letter-spacing: -1px;
+      color: var(--black); line-height: 1.15;
+      margin-bottom: 20px;
+    }
+    .soldout-page__body {
+      font-size: 17px; line-height: 1.7;
+      color: #444;
+      margin-bottom: 36px;
+    }
+    .soldout-page__ctas {
+      display: flex; flex-wrap: wrap; justify-content: center; gap: 14px;
+    }
 </style>
 </head>
 <body>
@@ -688,7 +721,7 @@
     <a href="/summer-members-priority" class="back-link">Back to Summer Programs</a>
     <div class="summer-hero__label">Summer 2026</div>
     <h1 class="summer-hero__title">Advanced Training Program</h1>
-    <p class="summer-hero__sub">July 6 – July 31. <strong style="color:var(--gold)">Invite only — you must apply.</strong> For players born 2017 or older training at a competitive level.</p>
+    <p class="summer-hero__sub">July 6 – July 31. <strong style="color:var(--gold)">Invite only . you must apply.</strong> For players born 2017 or older training at a competitive level.</p>
     <div class="summer-hero__badges">
       <span class="summer-hero__badge">July 6 – July 31</span>
       <span class="summer-hero__badge">Evening sessions</span>
@@ -698,103 +731,23 @@
   </div>
 </section>
 
-<!-- ===== TWO-COLUMN REGISTRATION ===== -->
-<section class="program-section program-section--dark">
-  <div class="program-section__inner" style="max-width:1200px">
-    <div class="reg-layout fade-in">
-
-      <!-- LEFT: program details -->
-      <div>
-        <div class="invite-banner fade-in">
-      <div class="invite-banner__icon">!</div>
-      <div class="invite-banner__text">
-        <div class="invite-banner__title">Invite Only — You Must Apply</div>
-        <div class="invite-banner__detail">This program is not open registration. Submit an application below and the Apex coaching staff will review and confirm placement.</div>
-      </div>
-    </div>
-        <div class="program-section__num">Program Summary</div>
-        <h2 class="program-section__title" style="font-size:clamp(28px,4vw,40px);margin-bottom:24px">Advanced Training</h2>
-
-        <div class="session-options" style="margin:0 0 8px">
-          <div class="session-option">
-            <div class="session-option__time">Evening Session 1</div>
-            <div class="session-option__hours">5:30 – 6:45 PM</div>
-          </div>
-          <div class="session-option">
-            <div class="session-option__time">Evening Session 2</div>
-            <div class="session-option__hours">7:00 – 8:15 PM</div>
-          </div>
-        </div>
-        <div style="margin:0 0 32px"><div class="tailored-callout fade-in">
-      <div class="tailored-callout__label">Tailored Placement</div>
-      <div class="tailored-callout__title">No one-size-fits-all at Apex.</div>
-      <div class="tailored-callout__body">Exact training days and session assignments are determined by each player's age and skill profile after assessment. Every group is built around development — not logistics. It's how we keep training environments sharp and progress real.</div>
-    </div></div>
-
-        <div class="spec-grid">
-          <div class="spec-cell">
-            <div class="spec-cell__label">Program Period</div>
-            <div class="spec-cell__value">Jul 6 – Jul 31</div>
-          </div>
-          <div class="spec-cell">
-            <div class="spec-cell__label">Session Length</div>
-            <div class="spec-cell__value">1.5 hours</div>
-          </div>
-          <div class="spec-cell">
-            <div class="spec-cell__label">Ages</div>
-            <div class="spec-cell__value">Born 2017 or older (Advanced)</div>
-          </div>
-          <div class="spec-cell">
-            <div class="spec-cell__label">Group size</div>
-            <div class="spec-cell__value">Limited spots</div>
-          </div>
-        </div>
-
-        <div style="margin-top:32px">
-          <div class="price-line">
-            <span class="price-line__label">1× per week</span>
-            <span class="price-line__value">$349 <span style="font-size:0.55em;font-weight:400;color:rgba(195,158,109,0.75);letter-spacing:1px">+ GST</span></span>
-          </div>
-          <div class="price-line">
-            <span class="price-line__label">2× per week <span style="font-size:11px;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-left:8px">Best Value</span></span>
-            <span class="price-line__value">$497 <span style="font-size:0.55em;font-weight:400;color:rgba(195,158,109,0.75);letter-spacing:1px">+ GST</span></span>
-          </div>
-        </div>
-
-        <div class="pricing-note-line">
-          Select your preferred frequency (1× or 2× per week) on the application form.
-        </div>
-
-        <p class="small-note" style="margin-top:24px">All prices in CAD plus 5% GST. Application or invite required. Players must be at a competitive training level. Apex coaching staff will review submissions and confirm placement.</p>
-      </div>
-
-      <!-- RIGHT: form -->
-      <div class="reg-form-wrap">
-        <div class="program-section__num" style="margin-bottom:12px">Application</div>
-        <h3 style="font-size:24px;font-weight:500;letter-spacing:-0.5px;margin-bottom:20px;color:#fff">Submit Your Application</h3>
-        <div class="reg-form-frame">
-          <iframe
-            id="JotFormIFrame-261415610290044"
-            title="Apex Football Academy Registration Form"
-            onload="window.parent.scrollTo(0,0)"
-            allowtransparency="true"
-            allow="geolocation; microphone; camera; fullscreen; payment"
-            src="https://form.jotform.com/261415610290044"
-            frameborder="0"
-            style="min-width:100%;max-width:100%;height:539px;border:none;"
-            scrolling="no"
-          ></iframe>
-        </div>
-      </div>
-
+<!-- ===== SOLD OUT NOTICE ===== -->
+<section class="soldout-page">
+  <div class="soldout-page__inner fade-in">
+    <span class="soldout-page__label">Summer 2026 · Sold Out</span>
+    <h2 class="soldout-page__title">This program is full for July 2026.</h2>
+    <p class="soldout-page__body">Advanced Training Program is sold out for Summer 2026. Thank you to every family who registered and applied. Spots may open up if registrations cancel. Add yourself to the waitlist below and we'll reach out if anything becomes available.</p>
+    <div class="soldout-page__ctas">
+      <a href="/summer-members-priority" class="btn-outline">View All Summer Programs</a>
+      <a href="mailto:admin@apexfootballacademy.com?subject=Summer%202026%20Waitlist%20Request&body=Hi%20Apex%20Football%20Academy%2C%0A%0AI'd%20like%20to%20be%20added%20to%20the%20waitlist%20for%20Summer%202026%20programs%20in%20case%20any%20spots%20open%20up.%0A%0APlayer%20name%3A%20%0AAge%2FYear%20born%3A%20%0AProgram%20of%20interest%3A%20%0APhone%20number%3A%20%0A%0AThank%20you." class="btn-gold">Join the Waitlist</a>
     </div>
   </div>
 </section>
 
 <!-- ===== GOLD CTA STRIP ===== -->
 <section class="gold-cta-strip">
-  <h2 class="gold-cta-strip__title">Not sure if this program is right for your player? Contact us before applying.</h2>
-  <a href="mailto:admin@apexfootballacademy.com" class="gold-cta-strip__btn">Contact the Academy</a>
+  <h2 class="gold-cta-strip__title">All programs sold out. Spots may open up.</h2>
+  <a href="mailto:admin@apexfootballacademy.com?subject=Summer%202026%20Waitlist%20Request&body=Hi%20Apex%20Football%20Academy%2C%0A%0AI'd%20like%20to%20be%20added%20to%20the%20waitlist%20for%20Summer%202026%20programs%20in%20case%20any%20spots%20open%20up.%0A%0APlayer%20name%3A%20%0AAge%2FYear%20born%3A%20%0AProgram%20of%20interest%3A%20%0APhone%20number%3A%20%0A%0AThank%20you." class="gold-cta-strip__btn">Join the Waitlist</a>
 </section>
 <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Scroll to top">↑</button>
 <!-- ===== FOOTER ===== -->
@@ -935,8 +888,6 @@
 <script src="/script.js"></script>
 
 
-<script src="https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js"></script>
-<script>window.jotformEmbedHandler && window.jotformEmbedHandler("iframe[id^='JotFormIFrame-']", "https://form.jotform.com/")</script>
 
 </body>
 </html>

@@ -56,7 +56,7 @@
   <link rel="stylesheet" href="/styles.css">
 
   <style>
-    /* Hero — dark, badge-rich, two-button */
+    /* Hero . dark, badge-rich, two-button */
     .summer-hero {
       background: linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 100%);
       color: #fff;
@@ -528,7 +528,7 @@
       .reg-form-wrap { position: static; }
     }
 
-    /* Form embed shell — matches site card aesthetic */
+    /* Form embed shell . matches site card aesthetic */
     .reg-form-frame {
       background: #fff;
       border: 1px solid rgba(0,0,0,0.08);
@@ -593,7 +593,40 @@
     }
     .program-section--light .pricing-note-line { color: #444; }
     .program-section--dark .pricing-note-line { color: rgba(255,255,255,0.8); }
-  </style>
+  
+    .soldout-page {
+      background: var(--light);
+      padding: 100px 24px;
+    }
+    .soldout-page__inner {
+      max-width: 720px; margin: 0 auto;
+      text-align: center;
+    }
+    .soldout-page__label {
+      display: inline-block;
+      font-size: 11px; font-weight: 700; letter-spacing: 3px;
+      padding: 8px 16px;
+      background: rgba(220,38,38,0.12);
+      color: #b91c1c;
+      border: 1px solid rgba(220,38,38,0.3);
+      text-transform: uppercase;
+      margin-bottom: 28px;
+    }
+    .soldout-page__title {
+      font-size: clamp(32px, 4.5vw, 48px);
+      font-weight: 300; letter-spacing: -1px;
+      color: var(--black); line-height: 1.15;
+      margin-bottom: 20px;
+    }
+    .soldout-page__body {
+      font-size: 17px; line-height: 1.7;
+      color: #444;
+      margin-bottom: 36px;
+    }
+    .soldout-page__ctas {
+      display: flex; flex-wrap: wrap; justify-content: center; gap: 14px;
+    }
+</style>
 </head>
 <body>
 
@@ -634,7 +667,7 @@
     <a href="/summer-members-priority" class="back-link">Back to Summer Programs</a>
     <div class="summer-hero__label">Summer 2026</div>
     <h1 class="summer-hero__title">Summer Camp Registration</h1>
-    <p class="summer-hero__sub">Five days. Two and a half hours a day. Real training. Apply for your player below — placements are made once players are grouped by age.</p>
+    <p class="summer-hero__sub">Five days. Two and a half hours a day. Real training. Apply for your player below . placements are made once players are grouped by age.</p>
     <div class="summer-hero__badges">
       <span class="summer-hero__badge">July 6, 13, 20 & 27</span>
       <span class="summer-hero__badge">9:00 – 11:30 AM</span>
@@ -644,81 +677,23 @@
   </div>
 </section>
 
-<!-- ===== TWO-COLUMN REGISTRATION ===== -->
-<section class="program-section program-section--light">
-  <div class="program-section__inner" style="max-width:1200px">
-    <div class="reg-layout fade-in">
-
-      <!-- LEFT: program details -->
-      <div>
-        <div class="program-section__num">Program Summary</div>
-        <h2 class="program-section__title" style="font-size:clamp(28px,4vw,40px);margin-bottom:24px">Summer Camp</h2>
-
-        <div class="spec-grid">
-          <div class="spec-cell">
-            <div class="spec-cell__label">Dates</div>
-            <div class="spec-cell__value">Jul 6, 13, 20 & 27</div>
-          </div>
-          <div class="spec-cell">
-            <div class="spec-cell__label">Format</div>
-            <div class="spec-cell__value">Mon–Fri each week</div>
-          </div>
-          <div class="spec-cell">
-            <div class="spec-cell__label">Time</div>
-            <div class="spec-cell__value">9:00 – 11:30 AM</div>
-          </div>
-          <div class="spec-cell">
-            <div class="spec-cell__label">Ages</div>
-            <div class="spec-cell__value">Born 2019 or older</div>
-          </div>
-          <div class="spec-cell">
-            <div class="spec-cell__label">Group size</div>
-            <div class="spec-cell__value">Limited spots</div>
-          </div>
-          <div class="spec-cell">
-            <div class="spec-cell__label">Location</div>
-            <div class="spec-cell__value">Apex Academy Surrey</div>
-          </div>
-        </div>
-
-        <div class="discount-bar">
-          <div class="discount-bar__icon">%</div>
-          <div class="discount-bar__text">
-            <div class="discount-bar__title">Multi-camp discount</div>
-            <div class="discount-bar__detail">First camp week <strong>$297 + GST</strong>. Every additional week <strong>10% off</strong>. Contact us for the coupon code.</div>
-          </div>
-        </div>
-
-        <p class="small-note" style="margin-top:24px">All prices in CAD plus 5% GST. Applications are placed once players are grouped by age. Existing members receive priority access.</p>
-      </div>
-
-      <!-- RIGHT: form -->
-      <div class="reg-form-wrap">
-        <div class="program-section__num" style="margin-bottom:12px">Application</div>
-        <h3 style="font-size:24px;font-weight:500;letter-spacing:-0.5px;margin-bottom:20px;color:var(--black)">Submit Your Application</h3>
-        <div class="reg-form-frame">
-          <iframe
-            id="JotFormIFrame-261415167250047"
-            title="Apex Football Academy Registration Form"
-            onload="window.parent.scrollTo(0,0)"
-            allowtransparency="true"
-            allow="geolocation; microphone; camera; fullscreen; payment"
-            src="https://form.jotform.com/261415167250047"
-            frameborder="0"
-            style="min-width:100%;max-width:100%;height:539px;border:none;"
-            scrolling="no"
-          ></iframe>
-        </div>
-      </div>
-
+<!-- ===== SOLD OUT NOTICE ===== -->
+<section class="soldout-page">
+  <div class="soldout-page__inner fade-in">
+    <span class="soldout-page__label">Summer 2026 · Sold Out</span>
+    <h2 class="soldout-page__title">This program is full for July 2026.</h2>
+    <p class="soldout-page__body">Summer Camp is sold out for Summer 2026. Thank you to every family who registered and applied. Spots may open up if registrations cancel. Add yourself to the waitlist below and we'll reach out if anything becomes available.</p>
+    <div class="soldout-page__ctas">
+      <a href="/summer-members-priority" class="btn-outline">View All Summer Programs</a>
+      <a href="mailto:admin@apexfootballacademy.com?subject=Summer%202026%20Waitlist%20Request&body=Hi%20Apex%20Football%20Academy%2C%0A%0AI'd%20like%20to%20be%20added%20to%20the%20waitlist%20for%20Summer%202026%20programs%20in%20case%20any%20spots%20open%20up.%0A%0APlayer%20name%3A%20%0AAge%2FYear%20born%3A%20%0AProgram%20of%20interest%3A%20%0APhone%20number%3A%20%0A%0AThank%20you." class="btn-gold">Join the Waitlist</a>
     </div>
   </div>
 </section>
 
 <!-- ===== GOLD CTA STRIP ===== -->
 <section class="gold-cta-strip">
-  <h2 class="gold-cta-strip__title">Questions about the camp? We are happy to help.</h2>
-  <a href="mailto:admin@apexfootballacademy.com" class="gold-cta-strip__btn">Contact the Academy</a>
+  <h2 class="gold-cta-strip__title">All programs sold out. Spots may open up.</h2>
+  <a href="mailto:admin@apexfootballacademy.com?subject=Summer%202026%20Waitlist%20Request&body=Hi%20Apex%20Football%20Academy%2C%0A%0AI'd%20like%20to%20be%20added%20to%20the%20waitlist%20for%20Summer%202026%20programs%20in%20case%20any%20spots%20open%20up.%0A%0APlayer%20name%3A%20%0AAge%2FYear%20born%3A%20%0AProgram%20of%20interest%3A%20%0APhone%20number%3A%20%0A%0AThank%20you." class="gold-cta-strip__btn">Join the Waitlist</a>
 </section>
 <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Scroll to top">↑</button>
 <!-- ===== FOOTER ===== -->
@@ -859,8 +834,6 @@
 <script src="/script.js"></script>
 
 
-<script src="https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js"></script>
-<script>window.jotformEmbedHandler && window.jotformEmbedHandler("iframe[id^='JotFormIFrame-']", "https://form.jotform.com/")</script>
 
 </body>
 </html>
